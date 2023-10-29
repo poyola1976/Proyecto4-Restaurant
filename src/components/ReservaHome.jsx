@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/esm/Button"
-import Container from "react-bootstrap/esm/Container"
 import Mapa from "./Mapa"
+import { Link } from "react-router-dom"
 
 
 const ReservaHome = () => {
@@ -11,10 +11,13 @@ const ReservaHome = () => {
         </div>
         <div id="aqui">
             <h1>RESERVA AQUÍ</h1>
-            <Button variant="dark" >RESERVA MESA</Button>{' '}
+            <Button variant="dark" as={Link} to="/reserva" className="bresh" >RESERVA MESA</Button>{' '}
+            
         </div>
+        
     </section>
   )
 }
 
 export default ReservaHome
+

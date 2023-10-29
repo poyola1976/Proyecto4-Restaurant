@@ -4,6 +4,7 @@ const Descripcion = () => {
   return (
     <section id="descripcion">
         <h5>CUIDANDO EL ORIGEN</h5>
+        <br />
         <h6>COCINA PURA</h6>
         <p>
 

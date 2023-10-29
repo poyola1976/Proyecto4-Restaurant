@@ -58,14 +58,7 @@ const Reserva = () => {
     }
   };
 
-  // const eliminarReserva = async (id) => {
-  //   try {
-  //     await deleteDoc(doc(db, "Reservas", id));
-  //     cargarReservas();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+ 
 
   const eliminarReserva = async (id) => {
     const confirmar = window.confirm("¿Estás seguro de que deseas eliminar esta reserva?");
@@ -104,7 +97,7 @@ const Reserva = () => {
   }, []);
 
   return (
-    <section>
+    <section id="reserva-fondo">
       <h1 className="text-center">Realizar una Reserva</h1>
       <form onSubmit={reservar}>
         <div className="text-center mt-3">
@@ -127,7 +120,7 @@ const Reserva = () => {
           <input
             type="text"
             name="mesa"
-            placeholder="Ingresa Número de Mesa (1-25)"
+            placeholder="Elige: Mañana, Tarde o Noche"
             value={cliente.mesa}
             onChange={capturarInputs}
             className="input-anchos input-separados"
@@ -152,7 +145,7 @@ const Reserva = () => {
               <th>ID Reserva</th>
               <th>Cliente</th>
               <th>Email</th>
-              <th>Mesa</th>
+              <th>Horario</th>
               <th>Fecha</th>
               <th>Modificar</th>
             </tr>
@@ -163,7 +156,7 @@ const Reserva = () => {
                 <td data-titulo="ID Reserva:">{reserva.id}</td>
                 <td data-titulo="Nombre:">{reserva.nombre}</td>
                 <td data-titulo="email:">{reserva.email}</td>
-                <td data-titulo="Mesa:">{reserva.mesa}</td>
+                <td data-titulo="Horario:">{reserva.mesa}</td>
                 <td data-titulo="Fecha:">{reserva.fecha}</td>
                 <td>
                   <div>
@@ -186,5 +179,3 @@ const Reserva = () => {
 };
 
 export default Reserva;
-
-

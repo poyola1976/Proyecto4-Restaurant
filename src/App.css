@@ -1,30 +1,48 @@
-/* navbar */
-/* #logo {
-  color: black;
-} */
 
+
+* {
+  
+font-family: 'Playfair Display', serif;
+
+}
 
 
 header {
   background-color: #F9F1EF;
+  position: relative;
+}
 
+.login a {
+  text-decoration: none;
+  color: #113650;  
 }
 
 
 
 /* Portada - banner */
+#carouselHome {
+  position: fixed;
+  top: -260px;
+  z-index: -1;
+  contain: content;
+  
+}
+
+#carouselHome .atras {
+  height: 1300px;
+}
+
 #front {
-  background-image: url(../img/RIC5521-1-2400x1600.jpg);
   position: relative;
   background-position: bottom;
-  min-height: 900px;
+  min-height: 800px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
   color: #FFF;
   flex-direction: column;
-
+  
 }
 
 .texto-front {
@@ -34,17 +52,23 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 100px;
-
+  color: #000;
+  font-weight: 600;
+  text-shadow: #1b1b1b 1px 0 1px
 }
 
 #bajada {
   font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  text-shadow: #000 1px 0 10px;
 }
 
 #descripcion {
   text-align: center;
   padding: 10% 20%;
   background-color: #F9F1EF;
+  font-size: larger;
 }
 
 #reserva {
@@ -53,39 +77,50 @@ header {
   background-position: bottom;
   min-height: 300px;
   max-height: 700px;
-  /* width: 100%; */
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  color: #FFF;
+  color: #FFF;  
 
-
+  
 }
 
 #aqui {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
   width: 50%;
+  
+}
+
+#aqui .bresh {
+  background-color: #000;
+  border: #000;
+  border-radius: 0%;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#aqui .bresh:hover {
+  background-color: #113650;
+  
 }
 
 /* mapa */
-.map {
-
-  /* padding-right: 15%; */
+.map { 
+  
   height: 100%;
   width: 100%;
-  /* flex-wrap: wrap; */
 }
 
 #mapaReserva {
-  height: 700px;
-  width: 50%;
+    height: 700px;
+    width: 50%;
 }
 
-/* .aqui {
-  text-align: center;
-} */
+
 
 
 
@@ -99,15 +134,10 @@ header {
 footer {
   position: relative;
   background-color: #222;
-  /* display: grid;
-  grid-template: 1fr 10% 20% 100px / 50% 50%;
-  color: #bbb;
-  width: 100%; */
   padding-top: 60px;
   padding-bottom: 10px;
-  /* background-color: rgb(17, 56, 80); */
   color: #fff;
-
+  
 }
 
 #footerIzq {
@@ -123,11 +153,9 @@ footer {
 }
 
 .socialmedia-container {
-  /* grid-area: 2 / 2 / span 1 / span 1; */
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* padding-bottom: 250px; */
   padding: 10px 100px;
   border-left-style: dashed;
   border-right-style: dashed;
@@ -141,7 +169,7 @@ footer {
 
 #rrss {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-evenly ;
 }
 
 
@@ -149,7 +177,6 @@ footer {
 
 
 #footerDer {
-  /* grid-area: 3 / 2 / span 1 / span 1; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -157,11 +184,32 @@ footer {
   padding: 10px 100px;
 }
 
+.footerReserva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerReserva .bresh {
+    color: #000;
+    background-color: #F9F1EF;
+    border: #000;
+    border-radius: 0%;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerReserva .bresh:hover{  
+  background-color: #113650;  
+}
+
 #imagenFooter {
   display: flex;
   justify-content: center;
-
-  /* width: 400px; */
   padding-top: 20px;
 }
 
@@ -169,11 +217,9 @@ footer {
   display: flex;
   justify-content: center;
 
-  /* background-color: rgb(17, 56, 80) */
 }
 
 .footer-container {
-  /* grid-area: 2 / 1 / span 1 / span 1; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -181,9 +227,7 @@ footer {
   gap: 5px;
 }
 
-/* .footerReserva button {
-  width: 40%;
-} */
+
 
 
 
@@ -193,11 +237,11 @@ footer {
 
 .socialmedia-container a:hover {
   .logo {
-    display: none;
+      display: none;
   }
 
   .logo-color {
-    display: flex;
+      display: flex;
   }
 }
 
@@ -211,10 +255,10 @@ footer {
 }
 
 .bottom {
-  /* grid-area: 5 / 1 / span 1 / span 2; */
+  
   display: flex;
   flex-direction: column;
-
+   
 }
 
 .bottom hr {
@@ -232,17 +276,27 @@ footer {
 
 
 
+.tabla-resultados {
+  border: 1px solid #000; /* Establece un borde sólido de 1 píxel de ancho y color negro */
+  border-collapse: collapse; /* Combina los bordes de las celdas para que se vean como uno solo */
+  
+}
 
-/* .about {
-  background-image: url(../public/img/esterno-giorno-brigata-al-lavoro.jpg);
-} */
+.tabla-resultados th, .tabla-resultados td {
+  border: 1px solid #000; /* Aplica bordes a las celdas (th y td) */
+  padding: 8px; /* Agrega espacio interno para que el contenido no esté pegado al borde */
+  max-width: 400px;
+  overflow: auto;
+}
+
+
 
 
 #payments {
-  grid-area: 4 / 2 / span 1 / span 1;
+  grid-area: 4 / 2 / span 1 / span 1 ;
   justify-self: center;
   align-self: center;
-
+  
 }
 
 /* 1100 media queris */
@@ -254,25 +308,31 @@ footer {
   }
 
   .socialmedia-container {
-    /* grid-area: 2 / 2 / span 1 / span 1; */
+    
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* padding-bottom: 250px; */
+    
     padding: 10px 100px;
     border-top-style: dashed;
     border-bottom-style: dashed;
     border-left: none;
     border-right: none;
     border-color: #000;
-
+    
   }
-  
 }
+
+
 
 @media (max-width: 991px) {
   .navorder {
-    display: flex;
+    display: flex ;
+  }
+
+  #carouselHome {
+    right: -900px;
+    
   }
 
   #front {
@@ -286,6 +346,15 @@ footer {
 }
 
 @media (max-width: 500px) {
+  #carouselHome {
+    top: 0;
+    right: -800px;
+  }
+
+  #carouselHome .atras{
+    height: 1000px;
+  }
+
   #logo-figura {
     display: none;
   }
@@ -295,26 +364,26 @@ footer {
   }
 
   #reserva {
-
+    
     position: relative;
-    /* background-position: center; */
+    
     background-size: cover;
-
+    
     min-height: 300px;
     max-height: 700px;
-    /* width: 100%; */
+    
     display: flex;
-    /* justify-content: center; */
+    
     flex-direction: column;
     align-items: center;
-    color: #FFF;
-
+    color: #FFF;  
+    
   }
-
+  
   #aqui {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
     justify-content: center;
     height: 300px;
     width: 100%;
@@ -324,16 +393,46 @@ footer {
     height: 350px;
     width: 100%;
 
-    /* background-position: center; */
-  }
+    
+}
 }
 
-/* column, height 50% en @media de reserva aqui */
-/* @media (max-width: 380px) {
 
-} */
 
-/* contenidos agregados */
+
+/* Nosotros */
+#about-fondo {
+  background-color: #F9F1EF;
+}
+
+.about {
+  background-color: #F9F1EF;
+  margin: auto;
+  max-width: 900px;
+  text-align: center;
+  font-size: large;
+}
+
+.aboutImage img{
+  width: 100%;
+
+}
+
+/* subir */
+.ir-arriba{
+  display:none;
+  background-repeat:no-repeat;
+  font-size:20px;
+  color:black;
+  cursor:pointer;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  z-index:2;
+}
+
+
+/* agregados */
 
 .tabla-resultados {
   border: 1px solid #000;
@@ -433,9 +532,7 @@ footer {
   text-align: center;
 }
 
-/* td:nth-child(5) {
-  text-align: left;
-} */
+
 
 
 td {
@@ -453,7 +550,9 @@ td {
     
     margin-bottom: 1px;
     text-align: left;
-    max-width: 400px;
+    max-width: auto;
+    
+    
   }
 
   .tabla-resultados th,
@@ -472,7 +571,7 @@ td {
   }
 
   table {
-    width: 90%;
+    width: auto;
     
   }
 
@@ -487,12 +586,13 @@ td {
 
   table td[data-titulo] {
     display: flex;
+    width: min-content;
   }
 
   table td[data-titulo]::before {
     content: attr(data-titulo);
     text-align: left;
-    width: 90%;
+    width: 82px;
     color: blue;
     font-weight: bold;
 
@@ -501,6 +601,38 @@ td {
   table thead {
     display: none;
   }
+
+  .tabla-centro {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+   
+    margin: auto;
+    
+  }
+
+  .tabla-centro tr {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 340px;
+    
+  }
+
+  .tabla-centro td {
+   
+    width: 300px !important;
+    
+  }
+
+  .tabla-centro td::before {
+    
+    width: 100px !important;
+    
+    
+  }
+
+  
 }
 
 .input-anchos {
@@ -515,9 +647,7 @@ td {
   text-align: center;
 }
 
-/* td:nth-child(5) {
-  text-align: left;
-} */
+
 
 
 td {
@@ -528,9 +658,9 @@ td {
 
 
 .boton-reserva {
-  background-color: blue;
+  background-color: #113650;
   color: white;
-  border: blue;
+  border: #113650;
   border-radius: 10px;
   width: 200px;
   height: 50px;
@@ -542,7 +672,7 @@ td {
 }
 
 .boton-reserva:hover {
-  background-color: green;
+  background-color: rgb(61, 112, 224);
 
 }
 
@@ -554,3 +684,18 @@ td {
   padding: 10px;
 
 }
+
+/* otros */
+
+#menu-fondo {
+  background-color: #F9F1EF;
+}
+
+#reserva-fondo {
+  background-color: #F9F1EF;
+}
+
+#administrador-fondo {
+  background-color: #F9F1EF;
+}
+

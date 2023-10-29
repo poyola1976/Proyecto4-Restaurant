@@ -51,14 +51,19 @@ const CrudMenu = () => {
         }
     };
 
+   
+
     const eliminarReserva = async (id) => {
-        try {
-            await deleteDoc(doc(db, "Menus", id));
+        const confirmar = window.confirm("¿Estás seguro de que deseas eliminar esta reserva?");
+        if (confirmar) {
+          try {
+            await deleteDoc(doc(db, "Reservas", id));
             cargarReservas();
-        } catch (error) {
+          } catch (error) {
             console.log(error);
+          }
         }
-    };
+      };
 
     const editarReserva = (id) => {
         const reservaToEdit = reservas.find((reserva) => reserva.id === id);
@@ -84,10 +89,8 @@ const CrudMenu = () => {
         cargarReservas();
     }, []);
 
-
-    
     return (
-        <section>
+        <section id="administrador-fondo">
             <h1 className="text-center">Página Reservada para Administradores</h1>
             <h2 className="text-center">Agregar un Plato</h2>
             <form onSubmit={reservar}>
@@ -171,8 +174,6 @@ const CrudMenu = () => {
         </section>
     );
 };
-
-
 
 export default CrudMenu;
 
