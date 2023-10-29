@@ -1,42 +1,556 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* navbar */
+/* #logo {
+  color: black;
+} */
+
+
+
+header {
+  background-color: #F9F1EF;
+
+}
+
+
+
+/* Portada - banner */
+#front {
+  background-image: url(../img/RIC5521-1-2400x1600.jpg);
+  position: relative;
+  background-position: bottom;
+  min-height: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #FFF;
+  flex-direction: column;
+
+}
+
+.texto-front {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+
+}
+
+#bajada {
+  font-size: 30px;
+}
+
+#descripcion {
+  text-align: center;
+  padding: 10% 20%;
+  background-color: #F9F1EF;
+}
+
+#reserva {
+  background-image: url(../public/img/RIC5292-2048x1392.png);
+  position: relative;
+  background-position: bottom;
+  min-height: 300px;
+  max-height: 700px;
+  /* width: 100%; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  color: #FFF;
+
+
+}
+
+#aqui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+/* mapa */
+.map {
+
+  /* padding-right: 15%; */
+  height: 100%;
+  width: 100%;
+  /* flex-wrap: wrap; */
+}
+
+#mapaReserva {
+  height: 700px;
+  width: 50%;
+}
+
+/* .aqui {
+  text-align: center;
+} */
+
+
+
+/* Footer */
+#primeraParte {
+  display: flex;
+  justify-content: center;
+}
+
+
+footer {
+  position: relative;
+  background-color: #222;
+  /* display: grid;
+  grid-template: 1fr 10% 20% 100px / 50% 50%;
+  color: #bbb;
+  width: 100%; */
+  padding-top: 60px;
+  padding-bottom: 10px;
+  /* background-color: rgb(17, 56, 80); */
+  color: #fff;
+
+}
+
+#footerIzq {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 100px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#footerIzq a {
+  text-decoration: none;
+  color: #FFF;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.socialmedia-container {
+  /* grid-area: 2 / 2 / span 1 / span 1; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* padding-bottom: 250px; */
+  padding: 10px 100px;
+  border-left-style: dashed;
+  border-right-style: dashed;
+  border-color: #000;
+}
+
+.socialmedia-container a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+#rrss {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+
+
+#footerDer {
+  /* grid-area: 3 / 2 / span 1 / span 1; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 100px;
+}
+
+#imagenFooter {
+  display: flex;
+  justify-content: center;
+
+  /* width: 400px; */
+  padding-top: 20px;
+}
+
+#logoFooter {
+  display: flex;
+  justify-content: center;
+
+  /* background-color: rgb(17, 56, 80) */
+}
+
+.footer-container {
+  /* grid-area: 2 / 1 / span 1 / span 1; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+/* .footerReserva button {
+  width: 40%;
+} */
+
+
+
+.logo-color {
+  display: none;
+}
+
+.socialmedia-container a:hover {
+  .logo {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo-color {
+    display: flex;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+
+
+.footer-container a {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.bottom {
+  /* grid-area: 5 / 1 / span 1 / span 2; */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.bottom hr {
+  width: 75%;
+  align-self: center;
+}
+
+.bottom p {
+  text-align: center;
+}
+
+
+
+/* tabla */
+
+
+
+
+/* .about {
+  background-image: url(../public/img/esterno-giorno-brigata-al-lavoro.jpg);
+} */
+
+
+#payments {
+  grid-area: 4 / 2 / span 1 / span 1;
+  justify-self: center;
+  align-self: center;
+
+}
+
+/* 1100 media queris */
+@media (max-width: 1100px) {
+  #primeraParte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .socialmedia-container {
+    /* grid-area: 2 / 2 / span 1 / span 1; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* padding-bottom: 250px; */
+    padding: 10px 100px;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-left: none;
+    border-right: none;
+    border-color: #000;
+
+  }
+  
+}
+
+@media (max-width: 991px) {
+  .navorder {
+    display: flex;
+  }
+
+  #front {
+    min-height: 700px;
+  }
+
+  #bajada {
+    font-size: 30px;
+    text-align: center;
   }
 }
 
-.card {
-  padding: 2em;
+@media (max-width: 500px) {
+  #logo-figura {
+    display: none;
+  }
+
+  .texto-front {
+    font-size: 70px;
+  }
+
+  #reserva {
+
+    position: relative;
+    /* background-position: center; */
+    background-size: cover;
+
+    min-height: 300px;
+    max-height: 700px;
+    /* width: 100%; */
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+
+  }
+
+  #aqui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+  }
+
+  #mapaReserva {
+    height: 350px;
+    width: 100%;
+
+    /* background-position: center; */
+  }
 }
 
-.read-the-docs {
-  color: #888;
+/* column, height 50% en @media de reserva aqui */
+/* @media (max-width: 380px) {
+
+} */
+
+/* contenidos agregados */
+
+.tabla-resultados {
+  border: 1px solid #000;
+  /* Establece un borde sólido de 1 píxel de ancho y color negro */
+  border-collapse: collapse;
+  /* Combina los bordes de las celdas para que se vean como uno solo */
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 400px;
+
+}
+
+.tabla-resultados th,
+.tabla-resultados td {
+  border: 1px solid #000;
+  /* Aplica bordes a las celdas (th y td) */
+  padding: 8px;
+  /* Agrega espacio interno para que el contenido no esté pegado al borde */
+  max-width: auto;
+  overflow: auto;
+
+}
+
+/* Centrar los contenidos de la tabla */
+.tabla-centro {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  max-width: auto;
+}
+
+/* Ajustar la tabala 1050px */
+@media (max-width: 1050px) {
+  .tabla-resultados {
+    border: 0px; /* Elimina los bordes de la tabla */
+    
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 400px;
+  }
+
+  .tabla-resultados th,
+  .tabla-resultados td {
+    border: 0px; /* Elimina los bordes de la tabla */
+    padding: 8px;
+    /* Agrega espacio interno para que el contenido no esté pegado al borde */
+    max-width: auto;
+    overflow: auto;
+
+  }
+
+ td {
+    text-align: left;
+    max-width: auto;
+  }
+
+  table {
+    width: 100%;
+    
+  }
+
+  table tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  table td[data-titulo] {
+    display: flex;
+  }
+
+  table td[data-titulo]::before {
+    content: attr(data-titulo);
+    text-align: left;
+    width: 100px;
+    color: blue;
+    font-weight: bold;
+
+  }
+
+  table thead {
+    display: none;
+  }
+}
+
+.input-anchos {
+  width: 300px;
+}
+
+.input-separados {
+  margin-bottom: 0px;
+}
+
+.table-titulos th {
+  text-align: center;
+}
+
+/* td:nth-child(5) {
+  text-align: left;
+} */
+
+
+td {
+  text-align: center;
+  /* Centra el contenido de todas las celdas */
+  max-width: auto;
+}
+
+
+/*ajusta la tabla hasta 450px */
+
+@media (max-width: 450px) {
+  .tabla-resultados {
+    border: 0px; /* Elimina los bordes de la tabla */
+    
+    margin-bottom: 1px;
+    text-align: left;
+    max-width: 400px;
+  }
+
+  .tabla-resultados th,
+  .tabla-resultados td {
+    border: 0px; /* Elimina los bordes de la tabla */
+    padding: 8px;
+    /* Agrega espacio interno para que el contenido no esté pegado al borde */
+    max-width: auto;
+    overflow: auto;
+
+  }
+
+ td {
+    text-align: left;
+    max-width: auto;
+  }
+
+  table {
+    width: 90%;
+    
+  }
+
+  table tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  table td[data-titulo] {
+    display: flex;
+  }
+
+  table td[data-titulo]::before {
+    content: attr(data-titulo);
+    text-align: left;
+    width: 90%;
+    color: blue;
+    font-weight: bold;
+
+  }
+
+  table thead {
+    display: none;
+  }
+}
+
+.input-anchos {
+  width: 300px;
+}
+
+.input-separados {
+  margin-bottom: 0px;
+}
+
+.table-titulos th {
+  text-align: center;
+}
+
+/* td:nth-child(5) {
+  text-align: left;
+} */
+
+
+td {
+  text-align: center;
+  /* Centra el contenido de todas las celdas */
+  max-width: auto;
+}
+
+
+.boton-reserva {
+  background-color: blue;
+  color: white;
+  border: blue;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.boton-reserva:hover {
+  background-color: green;
+
+}
+
+.text-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
 }
